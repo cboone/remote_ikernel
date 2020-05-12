@@ -7,10 +7,13 @@ except ImportError:
     from distutils.core import setup
     scripts = ['bin/remote_ikernel']
 
+with open('README.rst') as f:
+    long_desc = f.read()
+
 setup(name='remote_ikernel',
       version='0.4.6',
       description='Running IPython kernels through batch queues',
-      long_description=open('README.rst').read(),
+      long_description=long_desc,
       author='Tom Daff',
       author_email='tdd20@cam.ac.uk',
       license='BSD',
